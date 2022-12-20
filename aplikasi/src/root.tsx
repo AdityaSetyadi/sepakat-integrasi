@@ -19,8 +19,8 @@ export default function Root() {
   const location = useLocation();
   const active = (path: string) =>
     path == location.pathname
-      ? "border-sky-600"
-      : "border-transparent hover:border-sky-600";
+      ? "hover:text-[#4B4DFF] dark:hover:text-sky-400 "
+      : "text-sky-200"
   return (
     <Html lang="en">
       <Head>
@@ -31,7 +31,7 @@ export default function Root() {
       <Body>
         <Suspense>
           <ErrorBoundary>
-            <nav class="bg-sky-800">
+            {/* <nav class="bg-sky-800">
               <ul class="container flex items-center p-3 text-gray-200">
                 <li class={`border-b-2 ${active("/")} mx-1.5 sm:mx-6`}>
                   <A href="/">Home</A>
@@ -40,7 +40,68 @@ export default function Root() {
                   <A href="/about">About</A>
                 </li>
               </ul>
-            </nav>
+            </nav> */}
+
+            <div
+              class="sticky top-0 pt-6 z-40 w-full backdrop-blur-sm flex-none transition-colors lg:z-50 lg:border-b lg:border-slate-900/10 
+                      dark:border-slate-50/[0.06] bg-transparent supports-backdrop-blur:bg-[#11151c]/60 dark:bg-transparent
+                      "
+            >
+              <div class="max-w-8xl mx-auto">
+                <div class="py-4 border-b border-slate-900/10 px-4 -mt-6">
+                  <div class="relative flex items-center ">  
+                    <A
+                      class="flex-none overflow-hidden"
+                      href="/"
+                    >
+                      <img
+                        class="h-14"
+                        src="https://img.icons8.com/external-outline-lafs/64/null/external-ic_integration-crosschain-outline-lafs.png"
+                      />
+                    </A>
+                    <div class="relative hidden lg:flex items-center mr-auto">
+                      <nav class="text-sm leading-6 font-semibold ml-10 text-gray-500">
+                        <ul class="flex space-x-8">
+                          <li>
+                            <A
+                              class={`${active("/")} `}
+                              href="/deduplikasi"
+                            >
+                              Deduplikasi
+                            </A>
+                          </li>
+                          <li>
+                            <A
+                              class={`${active("/")} `}
+                              href="/linkage"
+                            >
+                              Linkage
+                            </A>
+                          </li>
+                          <li>
+                            <A
+                              class={`${active("/")} `}
+                              href="/singleid"
+                            >
+                              Penjaminan Single ID
+                            </A>
+                          </li>
+                          <li>
+                            <A
+                              class={`${active("/")} `}
+                              href="/individu"
+                            >
+                              Pencarian Individu
+                            </A>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <Routes>
               <FileRoutes />
             </Routes>
