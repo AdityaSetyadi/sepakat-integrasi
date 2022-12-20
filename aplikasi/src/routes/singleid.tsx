@@ -7,29 +7,24 @@ import 'datatables.net-dt/css/jquery.dataTables.css';
 import { createEffect, createSignal, Show } from "solid-js";
 
 // @ts-ignore
-import pairs_nik from "../data/skor_pasangan_nik.csv";
+import pairs_nik from "../data/skor_pasangan_nik_sugesti.csv";
 
 export default function Home() {
   
   const [modalSesuai, setModalSesuai] = createSignal(false);
   const  format = (d:any) => {
     // `d` is the original data object for the row
+    let txt = d.nama_sugesti.split('[')[0];
+    if(txt === ''){
+        txt = 'Tidak Ditemukan';
+    }
     return (
         '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
         '<tr>' +
-        '<td>Full name:</td>' +
+        '<td>Rekomendasi Individu:</td>' +
         '<td>' +
-          d.nama_pes +
+        txt +
         '</td>' +
-        '</tr>' +
-        '<tr>' +
-        '<td>Extension number:</td>' +
-        '<td>' +
-        '</td>' +
-        '</tr>' +
-        '<tr>' +
-        '<td>Extra info:</td>' +
-        '<td>And any further details here (images etc)...</td>' +
         '</tr>' +
         '</table>'
     );
@@ -40,7 +35,6 @@ export default function Home() {
 
     let datax : any[] = [];
     pairs_nik.forEach((e:any) => {
-      if(e.proba<99){
         datax.push({
             id: e.id,
             blok_pes: e.blok_pes,
@@ -57,9 +51,10 @@ export default function Home() {
             umur_sp: e.umur_sp,
             label: e.label,
             pred: e.pred,
-            proba: (e.proba*100).toFixed(2),
+            proba: e.proba,
             conf: e.conf,
             exact: e.exact,
+            nama_sugesti : e.nama_sugesti,
             skor : {
               nik_pes : e.nik_pes,
               nik_sp : e.nik_sp,
@@ -68,7 +63,7 @@ export default function Home() {
               proba : e.proba,
             }
           })
-      }
+      
 
     })
 
