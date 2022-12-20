@@ -5,12 +5,55 @@ export default function Home() {
   
   createEffect( () => {
     
+      
+  //LINKAGE PROBABILITY
+  const labelLinkage = [
+    'Berdasarkan NIK',
+    'Berdasarkan Karakteristik',
+    'Tidak Match',
+  ];        
+
+  const dataLinkage = {
+    labels: labelLinkage,
+    datasets: [
+      {
+        label: 'Persentase',
+        data: [56,39,5],
+        backgroundColor: ['MediumSeaGreen', 'Orange', 'Crimson', ]
+      }
+    ]
+  };
+
+  const LinkageCanvas = document.querySelector("#linkageCanvas") as HTMLCanvasElement;
+  new Chart(
+    LinkageCanvas,
+    {
+      type: 'doughnut',
+      data: dataLinkage,
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: 'Hasil Pentautan Data'
+          },
+        },
+        responsive: true,
+        scales: {
+          x: {
+            stacked: true,
+          },
+          y: {
+            stacked: true,
+          },
+        }
+      }
+    }
+  );
 
     //DUPLIKASI
       const labelDuplikasi = [
         'Regsosek',
         'DTKS',
-        'P3KE',
       ];        
 
       const dataDuplikasi = {
@@ -18,13 +61,13 @@ export default function Home() {
         datasets: [
           {
             label: 'Data Tunggal',
-            data: [120,220,192],
-            backgroundColor: 'WhiteSmoke'
+            data: [120,220],
+            backgroundColor: 'Gainsboro'
           },
           {
             label: 'Data Duplikat',
-            data: [17,43,29],
-            backgroundColor: 'deeppink'
+            data: [17,43],
+            backgroundColor: 'Crimson'
           },
         ]
       };
@@ -60,7 +103,6 @@ export default function Home() {
       const labelNikProblematik = [
         'Regsosek',
         'DTKS',
-        'P3KE',
       ];        
 
       const dataNikProblematik = {
@@ -68,13 +110,13 @@ export default function Home() {
         datasets: [
           {
             label: 'NIK Valid',
-            data: [120,220,192],
-            backgroundColor: 'WhiteSmoke'
+            data: [120,220],
+            backgroundColor: 'Gainsboro'
           },
           {
             label: 'NIK Bermasalah',
-            data: [25,19,39],
-            backgroundColor: 'deeppink'
+            data: [25,19],
+            backgroundColor: 'Crimson'
           },
         ]
       };
@@ -157,11 +199,12 @@ export default function Home() {
       <main class="">
 
         <div class="w-full grid grid-cols-2 " >
+          <canvas id="linkageCanvas" class="w-full h-full p-12 " />
           <div class="w-full grid grid-rows-2 " >
             <canvas id="duplikasiCanvas" class="w-full h-full p-12 " />
             <canvas id="nikProblematikCanvas" class="w-full h-full p-12 " />
           </div>
-          <canvas id="linkageProbCanvas" class="w-full h-full p-12 " />
+          <canvas id="linkageProbCanvas" class="w-full h-full p-12 hidden " />
         </div>
 
       </main>
