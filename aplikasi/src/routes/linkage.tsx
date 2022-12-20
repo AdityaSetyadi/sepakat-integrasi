@@ -62,17 +62,17 @@ export default function Home() {
       ],    
       columns: [
         { title : "NIK Regsosek", data: "nik_pes", className : "bg-green-100" },
-        { title : "Nama Regsosek", data: "nama_pes", className : "bg-green-100" },
+        { title : "Nama Regsosek", data: "nama_pes", className : "bg-orange-100" },
         { title : "Nama KK Regsosek", data: "nama_krt_pes" },
         { title : "Jenis Kelamin Regsosek", data: "jk_pes" },
         { title : "Umur Regsosek", data: "umur_pes" },
         { title : "NIK DTKS", data: "nik_sp", className : "bg-green-100" },
-        { title : "Nama DTKS", data: "nama_sp", className : "bg-green-100" },
+        { title : "Nama DTKS", data: "nama_sp", className : "bg-orange-100" },
         { title : "Nama KK DTKS", data: "nama_krt_sp" },
         { title : "Jenis Kelamin DTKS", data: "jk_sp" },
         { title : "Umur DTKS", data: "umur_sp" },
         { title : "Score Kemiripan", data: "proba", className : "bg-orange-100" , render: function (data, type, row, meta) { 
-            if(data>=80){
+            if(data>=99){
               return '<span class="bg-green-500 text-white px-4 rounded-full font-light">'+data+' % </span>'
             }
             else{
