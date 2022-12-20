@@ -1,15 +1,41 @@
 import { A } from "solid-start";
 import Counter from "~/components/Counter";
+import $ from "jquery";
 
 import DataTable from "datatables.net";
 import 'datatables.net-dt/css/jquery.dataTables.css';
-import { createEffect } from "solid-js";
+import { createEffect, createSignal, Show } from "solid-js";
 
 // @ts-ignore
 import pairs_nik from "../data/skor_pasangan_nik.csv";
 
 export default function Home() {
   
+  const [modalSesuai, setModalSesuai] = createSignal(false);
+  const  format = (d:any) => {
+    // `d` is the original data object for the row
+    return (
+        '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+        '<tr>' +
+        '<td>Full name:</td>' +
+        '<td>' +
+          d.nama_pes +
+        '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td>Extension number:</td>' +
+        '<td>' +
+        '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td>Extra info:</td>' +
+        '<td>And any further details here (images etc)...</td>' +
+        '</tr>' +
+        '</table>'
+    );
+  }
+  
+
   createEffect( () => {
 
     let datax : any[] = [];
@@ -52,6 +78,12 @@ export default function Home() {
       paging: true,
       data: datax,    
       columns: [
+        {
+            className: "dt-control",
+            orderable: false,
+            data: null,
+            defaultContent: '',
+        },
         { title : "Wilayah Regsosek", data: "blok_pes", className : "bg-green-100" },
         { title : "NIK Regsosek", data: "nik_pes" , className : "bg-orange-100"},
         { title : "Nama Regsosek", data: "nama_pes" },
@@ -73,31 +105,83 @@ export default function Home() {
             }
              
           }},
-        { title : "Aksi", data: "proba" , render: function (data, type, row, meta) { 
-            if(data>=99){
-              return '-'
-            }
-            else{
-              return '<div class="pointer-events-auto ml-8 rounded-md bg-indigo-600 py-2 px-3 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-orange-500">Sesuaikan</div>'
-            }
+        // { title : "Aksi", data: "proba" , render: function (data, type, row, meta) { 
+        //     if(data>=99){
+        //       return '-'
+        //     }
+        //     else{
+        //       return '<button '
+        //                 + 'class="pointer-events-auto ml-8 rounded-md bg-indigo-600 py-2 px-3 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-orange-500"'
+        //                 + 'onClick='+`${console.log('aarawq',data)}`+' >'
+        //                 + 'Sesuaikan'
+        //               + '</button>'
+        //     }
              
-        }},
+        //   }
+        // },
       ],
     });
     
+    $('#dt tbody').on('click', 'td.dt-control', function () {
+      console.log('aewtqw');
+      var tr = $(this).closest('tr');
+      var row = table.row(tr);
+
+      if (row.child.isShown()) {
+          // This row is already open - close it
+          row.child.hide();
+          tr.removeClass('shown');
+      } else {
+          // Open this row
+          // @ts-ignore
+          row.child(format(row.data())).show();
+          tr.addClass('shown');
+      }
+  });
+    
   })
-  
+
   return (
     <>
       
       <main class="text-center mx-auto text-gray-700 py-4 px-8">
+        
+        <Show when={modalSesuai()}>
+          <div class="modal-remark fixed inset-0 overflow-none" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+              <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true" onClick={e => props.setSectionPage?.('route')}></div>
+
+              <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+              <div class="relative inline-block bg-white rounded-lg text-center overflow-hidden shadow-xl align-middle max-w-7xl">
+
+                <div class="p-4 text-left">User: neo4j<br />Password: zi4aMWJEMlxLDE2h6IqcwdCIOKBnI-5wJ8gwrzkDzFs</div>
+
+                <div id="kg-visjs" >             
+                    <iframe 
+                        width="1280"
+                        height="580"
+                        src="https://bloom.neo4j.io/index.html?connectURL=neo4j%2Bs%3A%2F%2F101537b0.databases.neo4j.io&_ga=2.92822168.4616645.1667972888-2146945464.1667447232">
+                    </iframe>
+
+                    {/* <iframe frameborder="0" allowtransparency="true" allowfullscreen="true" 
+                      title="Data Visualization" marginheight="0" marginwidth="0" scrolling="yes" 
+                      style="display: block; width: 100%; height: 575px; visibility: visible;" 
+                      src="https://public.tableau.com/views/TenagaKerjaBoard/TenagaKerjaPariwisata?:embed=y&amp;:showVizHome=n&amp;:tabs=n&amp;:toolbar=n&amp;:device=mobile&amp;showAppBanner=false&amp;:apiID=host0#navType=0&amp;navSrc=Parse">
+
+                    </iframe> */}
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </Show>
 
         {/* Deduplikasi */}
         <div class="text-left mb-4">
           Pilih Survey
           {/* <Select {...props} class="w-1/5  text-left" placeholder=""/> */}
         </div>
-        <table id="dt" class="display pt-6"></table>
+        <table id="dt" class="display pt-6 w-screen"></table>
       </main>
     </>
   );

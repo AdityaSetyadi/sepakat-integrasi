@@ -8,6 +8,7 @@
   "type": "module",
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
+    "@types/jquery": "^3.5.14",
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.18",
     "solid-start-node": "^0.2.0",
@@ -23,6 +24,7 @@
     "chart.js": "^4.1.1",
     "datatables.net": "^1.13.1",
     "datatables.net-dt": "^1.13.1",
+    "jquery": "^3.6.2",
     "solid-js": "^1.6.2",
     "solid-start": "^0.2.0",
     "undici": "^5.11.0"
