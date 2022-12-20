@@ -73,6 +73,15 @@ export default function Home() {
             }
              
           }},
+        { title : "Aksi", data: "proba" , render: function (data, type, row, meta) { 
+            if(data>=99){
+              return '-'
+            }
+            else{
+              return '<div class="pointer-events-auto ml-8 rounded-md bg-indigo-600 py-2 px-3 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-orange-500">Sesuaikan</div>'
+            }
+             
+        }},
       ],
     });
     
