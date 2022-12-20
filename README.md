@@ -1,13 +1,13 @@
 
-<div>
+<div >
     <img src="https://regsosek-sepakat.bappenas.go.id/uploads/settings/logo.png" width="400" alt="" >
     <br/>
     <span class="footlogo-r1">
     <a href="https://www.bappenas.go.id/">
-        <img src="https://regsosek-sepakat.bappenas.go.id/assets/images/resources/footer/footicon1.png" width="150" alt="">
+        <img src="https://regsosek-sepakat.bappenas.go.id/assets/images/resources/footer/footicon1.png" width="120" alt="">
     </a>
     <a href="https://www.ekon.go.id/">
-        <img src="https://regsosek-sepakat.bappenas.go.id/assets/images/resources/footer/footicon1.1.png" width="150" alt="">
+        <img src="https://regsosek-sepakat.bappenas.go.id/assets/images/resources/footer/footicon1.1.png" width="120" alt="">
     </a>
     </span>
     <a href="https://www.kemendagri.go.id/">
