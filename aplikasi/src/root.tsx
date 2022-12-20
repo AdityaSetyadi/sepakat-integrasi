@@ -19,8 +19,8 @@ export default function Root() {
   const location = useLocation();
   const active = (path: string) =>
     path == location.pathname
-      ? "hover:text-[#4B4DFF] dark:hover:text-sky-400 "
-      : "text-sky-200"
+      ? "text-[#4B4DFF] "
+      : "text-gray-800"
   return (
     <Html lang="en">
       <Head>
@@ -64,7 +64,7 @@ export default function Root() {
                         <ul class="flex space-x-8">
                           <li>
                             <A
-                              class={`${active("/")} `}
+                              class={`${active("/deduplikasi")} hover:text-[#4B4DFF] dark:hover:text-sky-400`}
                               href="/deduplikasi"
                             >
                               Deduplikasi
@@ -72,7 +72,7 @@ export default function Root() {
                           </li>
                           <li>
                             <A
-                              class={`${active("/")} `}
+                              class={`${active("/singleid")} hover:text-[#4B4DFF] dark:hover:text-sky-400`}
                               href="/singleid"
                             >
                               Penjaminan Single ID
@@ -80,7 +80,7 @@ export default function Root() {
                           </li>
                           <li>
                             <A
-                              class={`${active("/")} `}
+                              class={`${active("/linkage")} hover:text-[#4B4DFF] dark:hover:text-sky-400`}
                               href="/linkage"
                             >
                               Linkage
@@ -88,8 +88,8 @@ export default function Root() {
                           </li>
                           <li>
                             <A
-                              class={`${active("/")} `}
-                              href="/individu"
+                              class={`${active("/linkage")} hover:text-[#4B4DFF] dark:hover:text-sky-400`}
+                              href="/linkage"
                             >
                               Pencarian Individu
                             </A>
