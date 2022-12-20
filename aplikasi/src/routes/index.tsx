@@ -19,7 +19,7 @@ export default function Home() {
       {
         label: 'Persentase',
         data: [88,8,4],
-        backgroundColor: ['MediumSeaGreen', 'Orange', 'Crimson', ]
+        backgroundColor: ['MediumSeaGreen', 'Orange', 'Crimson', ],
       }
     ]
   };
@@ -37,19 +37,26 @@ export default function Home() {
             text: 'Hasil Pentautan Data',
             color: 'DimGray',
             font: {
-              size: 25,
+              size: 20,
               weight: 'bold',
             },
           },
           subtitle: {
             display: true,
-            text: 'Hasil Pentautan Data',
+            text: 'Hasil Pentautan Data Berdasarkan Jenis Karakteristik Matching',
             color: 'DimGray',
             font: {
-              size: 17,
-              lineHeight: 1.2,
+              size: 16,
+              lineHeight: 1.5,
             },
-          }
+          },
+          legend: {
+              labels: {
+                  font: {
+                      size: 14
+                  }
+              }
+          },
         },
         responsive: true,
         scales: {
@@ -96,7 +103,28 @@ export default function Home() {
             plugins: {
               title: {
                 display: true,
-                text: 'Perbandingan Deduplikasi antar Data'
+                text: 'Perbandingan Deduplikasi antar Data',
+                color: 'DimGray',
+                font: {
+                  size: 20,
+                  weight: 'bold',
+                },
+              },
+              subtitle: {
+                display: true,
+                text: 'Hasil Perbandingan antara Data Tunggal dan Duplikat',
+                color: 'DimGray',
+                font: {
+                  size: 16,
+                  lineHeight: 1.5,
+                },
+              },
+              legend: {
+                  labels: {
+                      font: {
+                          size: 14
+                      }
+                  }
               },
             },
             responsive: true,
@@ -145,7 +173,28 @@ export default function Home() {
             plugins: {
               title: {
                 display: true,
-                text: 'Perbandingan NIK bermasalah antar Data'
+                text: 'Perbandingan NIK bermasalah antar Data',
+                color: 'DimGray',
+                font: {
+                  size: 20,
+                  weight: 'bold',
+                },
+              },
+              subtitle: {
+                display: true,
+                text: 'NIK Bermasalah diantaranya adalah',
+                color: 'DimGray',
+                font: {
+                  size: 16,
+                  lineHeight: 1.5,
+                },
+              },
+              legend: {
+                  labels: {
+                      font: {
+                          size: 14
+                      }
+                  }
               },
             },
             responsive: true,
@@ -213,10 +262,10 @@ export default function Home() {
       <main class="">
 
         <div class="w-full grid grid-cols-2 " >
-          <canvas id="linkageCanvas" class="w-full h-full p-12 " />
+          <canvas id="linkageCanvas" class="w-full h-full px-12 pb-12 pt-6 " />
           <div class="w-full grid grid-rows-2 " >
-            <canvas id="duplikasiCanvas" class="w-full h-full p-12 " />
-            <canvas id="nikProblematikCanvas" class="w-full h-full p-12 " />
+            <canvas id="duplikasiCanvas" class="w-full h-full px-12 pb-12 pt-6 " />
+            <canvas id="nikProblematikCanvas" class="w-full h-full px-12 pb-12 pt-6 " />
           </div>
           <canvas id="linkageProbCanvas" class="w-full h-full p-12 hidden " />
         </div>
