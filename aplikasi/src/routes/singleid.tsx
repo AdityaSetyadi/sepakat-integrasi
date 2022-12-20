@@ -51,7 +51,7 @@ export default function Home() {
             umur_sp: e.umur_sp,
             label: e.label,
             pred: e.pred,
-            proba: e.proba,
+            proba: (e.proba*1).toFixed(2),
             conf: e.conf,
             exact: e.exact,
             nama_sugesti : e.nama_sugesti,
@@ -60,7 +60,7 @@ export default function Home() {
               nik_sp : e.nik_sp,
               blok_pes : e.blok_pes,
               blok_sp : e.blok_sp,
-              proba : e.proba,
+              proba : (e.proba*1).toFixed(2),
             }
           })
       
@@ -109,10 +109,10 @@ export default function Home() {
         { title : "Umur DTKS", data: "umur_sp" },
         { title : "Score Kemiripan", data: "proba", className : "bg-orange-100" , render: function (data, type, row, meta) { 
             if(data>=99){
-              return '<span class="bg-green-500 text-white px-4 rounded-full font-light">'+data+'</span>'
+              return '<span class="bg-green-500 text-white px-4 rounded-full font-light">'+data+' % </span>'
             }
             else{
-              return '<span class="bg-red-500 text-white px-4 rounded-full font-light">'+data+'</span>'
+              return '<span class="bg-red-500 text-white px-4 rounded-full font-light">'+data+' % </span>'
             }
              
           }},
