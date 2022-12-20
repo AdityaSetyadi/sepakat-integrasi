@@ -24,7 +24,7 @@ export default function Root() {
   return (
     <Html lang="en">
       <Head>
-        <Title>SolidStart - With TailwindCSS</Title>
+        <Title>SEPAKAT - Modul Integrasi</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -51,13 +51,15 @@ export default function Root() {
                 <div class="py-4 border-b border-slate-900/10 px-4 -mt-6">
                   <div class="relative flex items-center ">  
                     <A
-                      class="flex-none overflow-hidden"
+                      class="flex flex-inline overflow-hidden"
                       href="/"
                     >
                       <img
-                        class="h-14"
-                        src="https://img.icons8.com/external-outline-lafs/64/null/external-ic_integration-crosschain-outline-lafs.png"
+                        class="h-14 p-1"
+                        // src="https://img.icons8.com/external-outline-lafs/64/null/external-ic_integration-crosschain-outline-lafs.png"
+                        src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/null/external-handshake-support-vitaliy-gorbachev-lineal-vitaly-gorbachev.png"
                       />
+                      <div class="flex items-center font-medium text-xl">&nbsp;&nbsp;|&nbsp;&nbsp;SERASI</div>
                     </A>
                     <div class="relative hidden lg:flex items-center mr-auto">
                       <nav class="text-sm leading-6 font-semibold ml-10 text-gray-500">
