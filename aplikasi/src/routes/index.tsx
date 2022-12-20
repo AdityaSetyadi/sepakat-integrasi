@@ -34,8 +34,22 @@ export default function Home() {
         plugins: {
           title: {
             display: true,
-            text: 'Hasil Pentautan Data'
+            text: 'Hasil Pentautan Data',
+            color: 'DimGray',
+            font: {
+              size: 25,
+              weight: 'bold',
+            },
           },
+          subtitle: {
+            display: true,
+            text: 'Hasil Pentautan Data',
+            color: 'DimGray',
+            font: {
+              size: 17,
+              lineHeight: 1.2,
+            },
+          }
         },
         responsive: true,
         scales: {
