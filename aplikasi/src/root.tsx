@@ -73,17 +73,17 @@ export default function Root() {
                           <li>
                             <A
                               class={`${active("/")} `}
-                              href="/linkage"
+                              href="/singleid"
                             >
-                              Linkage
+                              Penjaminan Single ID
                             </A>
                           </li>
                           <li>
                             <A
                               class={`${active("/")} `}
-                              href="/singleid"
+                              href="/linkage"
                             >
-                              Penjaminan Single ID
+                              Linkage
                             </A>
                           </li>
                           <li>
