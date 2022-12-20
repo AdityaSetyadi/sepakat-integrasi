@@ -1,6 +1,10 @@
 import solid from "solid-start/vite";
 import { defineConfig } from "vite";
+import dsv from "@rollup/plugin-dsv";
 
 export default defineConfig({
-  plugins: [solid()],
+  plugins: [
+    solid({ ssr: false }),
+    dsv(),
+  ],
 });
