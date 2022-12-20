@@ -2,7 +2,7 @@
   "name": "sepakat-integrasi",
   "scripts": {
     "dev": "solid-start dev",
-    "build": "solid-start build --output public",
+    "build": "solid-start build --output dist",
     "start": "solid-start start"
   },
   "type": "module",
