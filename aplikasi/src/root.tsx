@@ -64,6 +64,14 @@ export default function Root() {
                         <ul class="flex space-x-8">
                           <li>
                             <A
+                              class={`${active("/")} hover:text-[#4B4DFF] dark:hover:text-sky-400`}
+                              href="/"
+                            >
+                              Dashboard
+                            </A>
+                          </li>
+                          <li>
+                            <A
                               class={`${active("/deduplikasi")} hover:text-[#4B4DFF] dark:hover:text-sky-400`}
                               href="/deduplikasi"
                             >
