@@ -122,7 +122,7 @@ export default function Home() {
              
           }},
       ],
-      dom: '<"px-6"<"top"i>>rt<"px-6 pt-4 pb-10"<"bottom"flp><"clear">>',
+      dom: '<"px-6"<"top"Qfrtip>>rt',
     });
     
     $('#dt tbody').on('click', 'td.dt-control', function () {
@@ -185,7 +185,7 @@ export default function Home() {
           {/* <Select {...props} class="w-1/5  text-left" placeholder=""/> */}
         </div>
         <div class="pb-6">
-          <table id="dt" class="display p-8 w-screen"></table>
+          <table id="dt" class="display px-8 pb-8 pt-2 w-screen"></table>
         </div>
       </main>
     </>
