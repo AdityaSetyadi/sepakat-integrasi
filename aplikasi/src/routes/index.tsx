@@ -18,7 +18,7 @@ export default function Home() {
     datasets: [
       {
         label: 'Persentase',
-        data: [56,39,5],
+        data: [88,8,4],
         backgroundColor: ['MediumSeaGreen', 'Orange', 'Crimson', ]
       }
     ]
