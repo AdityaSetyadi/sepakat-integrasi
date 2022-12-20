@@ -76,7 +76,23 @@ export default function Home() {
       // options
       retrieve: true,
       paging: true,
-      data: datax,    
+      data: datax,
+      columnDefs : [
+        {width : "5%", target : 0},
+        {width : "5%", target : 1},
+        {width : "5%", target : 2},
+        {width : "15%", target : 3},
+        {width : "10%", target : 4},
+        {width : "5%", target : 5},
+        {width : "5%", target : 6},
+        {width : "5%", target : 7},
+        {width : "5%", target : 8},
+        {width : "15%", target : 9},
+        {width : "10%", target : 10},
+        {width : "5%", target : 11},
+        {width : "5%", target : 12},
+        {width : "5%", target : 13},
+      ],    
       columns: [
         {
             className: "dt-control",
@@ -105,20 +121,6 @@ export default function Home() {
             }
              
           }},
-        // { title : "Aksi", data: "proba" , render: function (data, type, row, meta) { 
-        //     if(data>=99){
-        //       return '-'
-        //     }
-        //     else{
-        //       return '<button '
-        //                 + 'class="pointer-events-auto ml-8 rounded-md bg-indigo-600 py-2 px-3 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-orange-500"'
-        //                 + 'onClick='+`${console.log('aarawq',data)}`+' >'
-        //                 + 'Sesuaikan'
-        //               + '</button>'
-        //     }
-             
-        //   }
-        // },
       ],
     });
     
