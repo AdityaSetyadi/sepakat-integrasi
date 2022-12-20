@@ -88,10 +88,11 @@ export default function Home() {
   return (
     <>
       
-      <main class="text-center mx-auto text-gray-700 py-4 px-8">
-
-        {/* linkage */}
-        <table id="dt" class="display px-8 pb-8 pt-2 w-screen"></table>
+      <main class="text-center mx-auto text-gray-700 ">
+        
+        <div class="py-6">
+          <table id="dt" class="display px-8 pb-8 pt-2 w-screen"></table>
+        </div>
       </main>
     </>
   );

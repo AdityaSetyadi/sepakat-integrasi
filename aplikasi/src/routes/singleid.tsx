@@ -11,7 +11,6 @@ import pairs_nik from "../data/skor_pasangan_nik_sugesti.csv";
 
 export default function Home() {
   
-  const [modalSesuai, setModalSesuai] = createSignal(false);
   const  format = (d:any) => {
     // `d` is the original data object for the row
     let txt = d.nama_sugesti.split('[')[0];
@@ -135,7 +134,7 @@ export default function Home() {
           row.child(format(row.data())).show();
           tr.addClass('shown');
       }
-  });
+    });
     
   })
 
