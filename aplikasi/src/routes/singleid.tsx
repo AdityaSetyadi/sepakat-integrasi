@@ -97,7 +97,7 @@ export default function Home() {
           Pilih Survey
           {/* <Select {...props} class="w-1/5  text-left" placeholder=""/> */}
         </div>
-        <table id="dt" class="display "></table>
+        <table id="dt" class="display pt-6"></table>
       </main>
     </>
   );
