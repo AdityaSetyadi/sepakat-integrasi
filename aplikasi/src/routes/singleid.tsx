@@ -122,6 +122,7 @@ export default function Home() {
              
           }},
       ],
+      dom: '<"px-6"<"top"i>>rt<"px-6 pt-4 pb-10"<"bottom"flp><"clear">>',
     });
     
     $('#dt tbody').on('click', 'td.dt-control', function () {
@@ -146,7 +147,7 @@ export default function Home() {
   return (
     <>
       
-      <main class="text-center mx-auto text-gray-700 py-4 px-8">
+      <main class="text-center mx-auto text-gray-700 ">
         
         <Show when={modalSesuai()}>
           <div class="modal-remark fixed inset-0 overflow-none" aria-labelledby="modal-title" role="dialog" aria-modal="true">
@@ -183,7 +184,9 @@ export default function Home() {
           Pilih Survey
           {/* <Select {...props} class="w-1/5  text-left" placeholder=""/> */}
         </div>
-        <table id="dt" class="display pt-6 w-screen"></table>
+        <div class="pb-6">
+          <table id="dt" class="display p-8 w-screen"></table>
+        </div>
       </main>
     </>
   );
