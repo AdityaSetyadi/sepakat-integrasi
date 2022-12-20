@@ -82,12 +82,12 @@ export default function Home() {
         datasets: [
           {
             label: 'Data Tunggal',
-            data: [120,220],
+            data: [9940,9940],
             backgroundColor: 'Gainsboro'
           },
           {
             label: 'Data Duplikat',
-            data: [17,43],
+            data: [10,12],
             backgroundColor: 'Crimson'
           },
         ]
@@ -112,7 +112,7 @@ export default function Home() {
               },
               subtitle: {
                 display: true,
-                text: 'Hasil Perbandingan antara Data Tunggal dan Duplikat',
+                text: 'Hasil perbandingan antara Data Tunggal dan Duplikat',
                 color: 'DimGray',
                 font: {
                   size: 16,
@@ -182,7 +182,7 @@ export default function Home() {
               },
               subtitle: {
                 display: true,
-                text: 'NIK Bermasalah diantaranya adalah',
+                text: 'NIK Bermasalah adalah NIK yang digunakan dua atau lebih orang berbeda, dan konsisten disetiap data',
                 color: 'DimGray',
                 font: {
                   size: 16,
