@@ -99,9 +99,15 @@ Data yang digunakan dalam perencanaan suatu kebijakan atau penyusunan program, s
     │   └── [...]
     │           SEPAKAT platform, dibangun dengan SolidJS
     │
+    ├── data
+    │   ├── data_deduplikasi.csv
+    │   ├── raw_data_individu.csv
+    │   ├── skor_linkage.csv
+    │   └── skor_pasangan_nik_sugesti.csv
+    │
     ├── dokumen
     │   ├── HACKATHON_REGSOSEK2022_MUFAKAT.pdf
-    │   └── [...]
+    │   └── Ignatius Aditya Setyadi_Langker_SEPAKAT - Modul Integrasi.pdf
     │
     └── notebook
         ├── 01_Negative_Sampling.ipynb
@@ -126,3 +132,12 @@ Data yang digunakan dalam perencanaan suatu kebijakan atau penyusunan program, s
 
 
 
+## Appendix
+Code Repository
+* https://github.com/AdityaSetyadi/sepakat-integrasi
+
+Aplikasi SEPAKAT - Modul Integrasi
+* https://sepakat-integrasi.vercel.app/ 
+
+Presentasi
+* https://bit.ly/sepakat-integrasi-slide
