@@ -88,8 +88,8 @@ export default function Root() {
                           </li>
                           <li>
                             <A
-                              class={`${active("/linkage")} hover:text-[#4B4DFF] dark:hover:text-sky-400`}
-                              href="/linkage"
+                              class={`${active("/individu")} hover:text-[#4B4DFF] dark:hover:text-sky-400`}
+                              href="/individu"
                             >
                               Pencarian Individu
                             </A>
