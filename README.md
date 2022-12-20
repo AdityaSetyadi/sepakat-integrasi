@@ -30,7 +30,6 @@
 
 
 
-
 # SEPAKAT - Modul Integrasi: Integrasi Data Regsosek, sebagai Informasi Dasar Individu, dengan Data Terkait menggunakan Pendekatan Resolusi Entitas
 
 <!-- *** -->
@@ -98,16 +97,16 @@ Data yang digunakan dalam perencanaan suatu kebijakan atau penyusunan program, s
     .
     ├── aplikasi
     │   └── [...]
-    │           SEPAKAT platform, build with SolidJS
+    │           SEPAKAT platform, dibangun dengan SolidJS
     │
     ├── dokumen
     │   ├── HACKATHON_REGSOSEK2022_MUFAKAT.pdf
     │   └── [...]
     │
     └── notebook
-        ├── 00_Data_preparation.ipynb
-        └── 01_Graph_Analysis_Country.ipynb
-                The Jupyter Notebooks that we created during the processing
+        ├── 01_Negative_Sampling.ipynb
+        └── 02_NIK_Pairs_Prediction.ipynb
+                The Jupyter Notebooks yang dibuat untuk pengolahan data Regsosek
 
 
 ## Daftar Pustaka
