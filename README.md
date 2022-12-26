@@ -1,6 +1,6 @@
 
 <div >
-    <img src="https://regsosek-sepakat.bappenas.go.id/uploads/settings/logo.png" width="400" alt="" >
+    <img src="https://regsosek-sepakat.bappenas.go.id/uploads/settings/logo.png" width="400" alt="" style="  display: block; margin-left: auto; margin-right: auto; width: 50%;">
     <br/>
     <span class="footlogo-r1">
     <a href="https://www.bappenas.go.id/">
@@ -33,6 +33,29 @@
 # SEPAKAT - Modul Integrasi: Integrasi Data Regsosek, sebagai Informasi Dasar Individu, dengan Data Terkait menggunakan Pendekatan Resolusi Entitas
 
 <!-- *** -->
+
+SEPAKAT - Modul Integrasi is a winning hackathon project in Hackathon Regsosek 2022 organized by The Ministry of National Development Planning/Bappenas Indonesia. This module provides a single individual identification model by integrating Regsosek data as basic information which is then linked with related data using the idea of entity resolution.
+
+<table>
+    <tr>
+        <td>
+            <img src="https://pbs.twimg.com/media/FkjQO0yUAAApoIC?format=jpg&name=large" width="500"/>
+        </td>
+        <td>
+            <img src="https://pbs.twimg.com/media/FkjQProUUAE-JXU?format=jpg&name=large" width="500"/>
+        </td>        
+        <td rowspan="2">
+            <img src="https://pbs.twimg.com/media/FkjQRLGUcAA57B5?format=jpg&name=large" width="1000"/>
+        </td>
+    </tr>        
+    <tr>        
+        <td colspan="2">
+            <img src="https://pbs.twimg.com/media/FkjQQkgVUAAMcYO?format=jpg&name=large" width="1000"/>
+        </td>
+    </tr>
+</table>
+
+
 
 ## Kontributor
 - [Ignatius Aditya Setyadi](https://www.linkedin.com/in/adityasetyadi/) *BPS - Statistics Indonesia*
